@@ -6,12 +6,12 @@ SHELL = /bin/sh
 # compiler/linker settings
 # specify flags and libraries needed for your compiler
 
-CC =		icc
+CC =		g++
 CCFLAGS =	-O
 DEPFLAGS =	-M
 SHFLAGS =	-fPIC
 
-LINK =		icc
+LINK =		g++
 LINKFLAGS =	-O
 LIB =	  	-lstdc++
 SIZE =		size
@@ -33,17 +33,17 @@ SPK_INC =	-DSPPARKS_GZIP -DSPPARKS_JPEG
 # PATH = path for MPI library
 # LIB = name of MPI library
 
-MPI_INC =       -DMPICH_SKIP_MPICXX
-MPI_PATH = 
-MPI_LIB =	-lmpich -lmpl -lpthread
+MPI_INC = -I/Users/nik/code/spparks-8Jul15/src/STUBS/
+MPI_PATH = -L/Users/nik/code/spparks-8Jul15/src/STUBS
+MPI_LIB =	-lmpi
 
 # JPEG library, only needed if -DLAMMPS_JPEG listed with LMP_INC
 # INC = path for jpeglib.h
 # PATH = path for JPEG library
 # LIB = name of JPEG library
 
-JPG_INC =       
-JPG_PATH = 	
+JPG_INC = -I/usr/local/include/
+JPG_PATH =
 JPG_LIB =	-ljpeg
 
 # ---------------------------------------------------------------------
